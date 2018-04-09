@@ -1,4 +1,4 @@
-# Complien-Form-creator-C-
+# Complien Form creator C++
 Creates files .cpp .hpp in necessary places with all needed inclusions.
 
 ## Installation
