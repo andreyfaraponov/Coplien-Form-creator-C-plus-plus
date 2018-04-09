@@ -12,3 +12,13 @@ echo "alias coplien='~/.software/Coplien-Form-creator-C-plus-plus/ft_coplien'" >
 of
 echo "alias coplien='~/.software/Coplien-Form-creator-C-plus-plus/ft_coplien'" >> ~/.zshrc
 ```
+## Useage flags
+
+Option | Description
+------ | -----------
+-l | disable including includes and srcs folders
+-algo | includes <algorithm>
+  -ios | includes <iostream>
+  -fs | includes <fstream>
+  -vector | includes <vector>
+  -all | includes all above without -l
