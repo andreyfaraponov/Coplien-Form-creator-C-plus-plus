@@ -17,8 +17,8 @@ echo "alias coplien='~/.software/Coplien-Form-creator-C-plus-plus/ft_coplien'" >
 Option | Description
 ------ | -----------
 -l | disable including includes and srcs folders
--algo | includes <algorithm>
-  -ios | includes <iostream>
-  -fs | includes <fstream>
-  -vector | includes <vector>
+-algo | includes algorithm
+  -ios | includes iostream
+  -fs | includes fstream
+  -vector | includes vector
   -all | includes all above without -l
