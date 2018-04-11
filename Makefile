@@ -2,8 +2,6 @@ NAME = ft_coplien
 
 KEYS = -Wall -Wextra -Wno-c++11-extensions -std=c++11 -pedantic
 
-#  -std=c++98 -Wall -Wextra -Werror 
-
 CC = clang++
 
 SRCS = srcs

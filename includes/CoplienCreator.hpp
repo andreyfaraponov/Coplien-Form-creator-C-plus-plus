@@ -25,6 +25,7 @@ private:
 protected:
 	std::vector<std::string> cpps;
 	std::vector<std::string> hpps;
+	std::fstream mainFile;
 	int realFiles;
 
 	void createCppFile(std::string,std::string);

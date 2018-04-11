@@ -42,14 +42,13 @@ void CoplienCreator::createCppFile(std::string name, std::string fpath) {
 	file << name << "::~" << name << "() {" << std::endl;
 	file << "}" << std::endl;
 	file << name << "::" << name << "(" << name << " const& src) {" << std::endl;
-	file << "    *this = src;" << std::endl;
+	file << "\t*this = src;" << std::endl;
 	file << "}" << std::endl;
 	file << name << "& " << name << "::operator=(" << name << " const& src) {" << std::endl;
-	file << "    // TODO" << std::endl;
-	file << "    (void)src;" << std::endl;
-	file << "    return *this;" << std::endl;
+	file << "\t// TODO" << std::endl;
+	file << "\tstatic_cast<void>(src);" << std::endl;
+	file << "\treturn *this;" << std::endl;
 	file << "}" << std::endl;
-	file << std::endl;
 	file.close();
 }
 void CoplienCreator::createHppFile(std::string name, std::string fpath) {
@@ -84,10 +83,10 @@ void CoplienCreator::createHppFile(std::string name, std::string fpath) {
 	file << "private:" << std::endl;
 	file << "protected:" << std::endl;
 	file << "public:" << std::endl;
-	file << "    " << name << "();" << std::endl;
-	file << "    virtual ~" << name << "();" << std::endl;
-	file << "    " << name << "& operator=(" << name << " const& src);" << std::endl;
-	file << "    " << name << "(" << name << " const& src);" << std::endl;
+	file << "\t" << name << "();" << std::endl;
+	file << "\tvirtual ~" << name << "();" << std::endl;
+	file << "\t" << name << "& operator=(" << name << " const& src);" << std::endl;
+	file << "\t" << name << "(" << name << " const& src);" << std::endl;
 	file << "};" << std::endl;
 	file << std::endl;
 	file << "#endif // !" << hppName << "_HPP" << std::endl;
